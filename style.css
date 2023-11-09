@@ -1,0 +1,705 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/*header section*/
+#header {
+  background-color: #0e0404;
+  background-size: cover;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: auto;
+}
+#header .header {
+  display: flex;
+	min-height: 8vh;
+	background-color: inherit;
+	transition: 0.3s ease background-color;
+  justify-content: space-between;
+  padding: 38px;
+}
+
+#header .right-side{
+  display: flex;
+  list-style: none;
+}
+
+#header .right-side div{
+  margin-right: 20px;
+
+}
+
+#header .nav-bar nav ul {
+  display: flex;
+  list-style: none;
+  color: white;
+  font-size: 15px;
+
+}
+
+#header .nav-bar nav ul div li a {
+  color: crimson;
+}
+
+#header .brand {
+  color: white;
+
+  display: flex;
+
+}
+#header .nav-bar nav ul li a::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: red;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+#header .nav-bar nav ul li a:hover::after{
+  width: 100%
+}
+/*header section end*/
+#hero {
+  /*background-color: #0e0404;*/
+	background-size: cover;
+	background-image: url("images/computer_programmer.jpeg.jpg");
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+	z-index: 1;
+}
+#hero::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.7;
+	z-index: -1;
+}
+#hero .hero {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 50px;
+	justify-content: flex-start;
+}
+#hero h1 {
+	display: block;
+	width: fit-content;
+	font-size: 4rem;
+	position: relative;
+	color: white;
+
+}
+
+#hero .cta{
+  display: inline-block;
+  padding: 10px 30px;
+  color: crimson;
+  background-color: transparent;
+  border: 2px solid crimson;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin-top: 30px;
+  transition: .3s ease background-color;
+  transition-property: background-color, color;
+}
+
+#hero .cta:hover{
+  color: white;
+  background-color: crimson;
+
+}
+
+#hero .hero div h1{
+	color: transparent;
+	font-size: 80px;
+	position: relative;
+	display:inline-block;
+	animation: text_reveal .5s ease forwards;
+	animation-delay: .5s;
+}
+#hero .hero div h1 span{
+	position: absolute;
+	left:0;
+	top:0;
+	height: 100%;
+	width: 0%;
+	background-color: crimson;
+	animation: overlay 1s ease forwards;
+	animation-delay: .5s;
+}
+
+@keyframes overlay{
+	50%{
+		width: 100%;
+		left: 0;
+	}
+	100%{
+		left:100%;
+		width: 0;
+	}
+}
+
+@keyframes text_reveal{
+	100%{
+		color: white;
+	}
+}
+
+/*about me section*/
+
+#about {
+  background-color: #0e0404;
+	background-size: cover;
+}
+#about .two{
+	/*border: 5px solid red;*/
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#about .profile-content{
+  flex-basis: 40%;
+  background: #0e0404;
+  border-radius: 10px;
+  margin-bottom: 10%;
+  padding: 20px 12px;
+  box-sizing:border-box;
+	right: -50px;
+}
+
+#about .profile-content a.cta{
+  display: inline-block;
+  padding: 10px 30px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid crimson;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin-top: 30px;
+  transition: .3s ease background-color;
+  transition-property: background-color, color;
+}
+
+#about .profile-content a.cta:hover{
+  color: white;
+  background-color: crimson;
+
+}
+
+#about .profile-content .section-title{
+	font-size: 50px;
+	color: white;
+	letter-spacing: .2rem;
+	margin-bottom: 10px;
+
+}
+
+#about .profile-content h2{
+	font-size: 20px;
+	color: white;
+	margin-bottom: 10px;
+}
+
+#about .profile-content p{
+	font-size: 12px;
+	color: white;
+	margin-bottom: 10px;
+}
+
+#about .profileimage img{
+	opacity: 3.0
+}
+#about .two .profileimage{
+	height: 500px;
+	width: 300px;
+	position: relative;
+	border: 10px #0e0404;
+	left: -56px;
+	border: 2px solid crimson;
+}
+
+#about .two .profileimage::after {
+	content: '';
+	position: absolute;
+	left: -33px;
+	top: 19px;
+	height: 100%;
+	width: 100%;
+	border: 7px solid crimson;
+	z-index: -1;
+}
+
+
+
+/*contact*/
+/* body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+*/
+
+#contact {
+  background-color: #0e0404;
+	background-size: cover;
+}
+.background {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+	
+} 
+
+.container {
+  flex: 0 1 700px;
+  margin: auto;
+	
+}
+
+.screen {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.screen-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #4d4d4f;
+  padding: 10px 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.screen-header-left {
+  display: flex;
+}
+
+.screen-header-button {
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #999;
+}
+
+.screen-header-button.close {
+  background: #ed1c6f;
+}
+
+.screen-header-button.maximize {
+  background: #e8e925;
+}
+
+.screen-header-button.minimize {
+  background: #74c54f;
+}
+
+.screen-header-right {
+  display: flex;
+}
+
+.screen-header-ellipsis {
+  width: 3px;
+  height: 3px;
+  margin-left: 2px;
+  border-radius: 50%;
+  background: #fff;
+  margin-right: 2px;
+}
+
+.screen-body {
+  display: flex;
+}
+
+.screen-body-item {
+  flex: 1;
+  padding: 50px;
+}
+
+.screen-body-item.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-title {
+  color: #ea1d6f;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.app-contact {
+  font-size: 14px;
+  color: #999;
+}
+
+.app-form {
+  margin-top: 20px;
+}
+
+.app-form-group {
+  margin-bottom: 20px;
+}
+
+.app-form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  outline: none;
+}
+
+.app-form-control::placeholder {
+  color: #999;
+}
+
+.message textarea {
+  height: 100px;
+}
+
+.app-form-button {
+  background: crimson;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.app-form-button:hover {
+  background: #b9134f;
+}
+
+/* Add the timeline CSS here */
+
+/* portfolio.css */
+/* Add the timeline CSS here */
+
+/* ================ The Timeline ================ */
+#portfolio {
+  background-color: #0e0404;
+  color: crimson;
+  margin: 0;
+  padding: 0;
+  background: rgb(230,230,230);
+  color: rgb(50,50,50);
+  /* font-family: 'Open Sans', sans-serif;
+  font-size: 112.5%; */
+  line-height: 8.0em;
+}
+.timeline {
+  font-size: 150%;
+  position: relative;
+  width: 660px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 1em 0;
+  list-style-type: none;
+}
+
+.timeline:before {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  content: ' ';
+  display: block;
+  width: 6px;
+  height: 100%;
+  margin-left: -3px;
+  background: rgb(80,80,80);
+  background: -moz-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
+  background: -webkit-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: -o-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: -ms-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: linear-gradient(to bottom, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  
+  z-index: 5;
+}
+
+.timeline li {
+  padding: 1em 0;
+}
+
+.timeline li:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.direction-l {
+  position: relative;
+  width: 300px;
+  float: left;
+  text-align: right;
+}
+
+.direction-r {
+  position: relative;
+  width: 300px;
+  float: right;
+}
+
+.flag-wrapper {
+  position: relative;
+  display: inline-block;
+  
+  text-align: center;
+}
+
+.flag {
+  position: relative;
+  display: inline;
+  background: rgb(248,248,248);
+  padding: 6px 10px;
+  border-radius: 5px;
+  
+  font-weight: 600;
+  text-align: left;
+}
+
+.direction-l .flag {
+  -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  -moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+}
+
+.direction-r .flag {
+  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+}
+
+.direction-l .flag:before,
+.direction-r .flag:before {
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  content: ' ';
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin-top: -10px;
+  background: #fff;
+  border-radius: 10px;
+  border: 4px solid rgb(255,80,80);
+  z-index: 10;
+}
+
+.direction-r .flag:before {
+  left: -40px;
+}
+
+.direction-l .flag:after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  height: 0;
+  width: 0;
+  margin-top: -8px;
+  border: solid transparent;
+  border-left-color: rgb(248,248,248);
+  border-width: 8px;
+  pointer-events: none;
+}
+
+.direction-r .flag:after {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  height: 0;
+  width: 0;
+  margin-top: -8px;
+  border: solid transparent;
+  border-right-color: rgb(248,248,248);
+  border-width: 8px;
+  pointer-events: none;
+}
+
+.time-wrapper {
+  display: inline;
+  
+  line-height: 1em;
+  font-size: 0.66666em;
+  color: rgb(250,80,80);
+  vertical-align: middle;
+}
+
+.direction-l .time-wrapper {
+  float: left;
+}
+
+.direction-r .time-wrapper {
+  float: right;
+}
+
+.time {
+  display: inline-block;
+  padding: 4px 6px;
+  background: rgb(248,248,248);
+}
+
+.desc {
+  margin: 1em 0.75em 0 0;
+  
+  font-size: 0.77777em;
+  font-style: italic;
+  line-height: 1.5em;
+}
+
+.direction-r .desc {
+  margin: 1em 0 0 0.75em;
+}
+
+/* ================ Timeline Media Queries ================ */
+
+@media screen and (max-width: 660px) {
+
+.timeline {
+ 	width: 100%;
+	padding: 4em 0 1em 0;
+}
+
+.timeline li {
+	padding: 2em 0;
+}
+
+.direction-l,
+.direction-r {
+	float: none;
+	width: 100%;
+
+	text-align: center;
+}
+
+.flag-wrapper {
+	text-align: center;
+}
+
+.flag {
+	background: rgb(255,255,255);
+	z-index: 15;
+}
+
+.direction-l .flag:before,
+.direction-r .flag:before {
+  position: absolute;
+  top: -30px;
+	left: 50%;
+	content: ' ';
+	display: block;
+	width: 12px;
+	height: 12px;
+	margin-left: -9px;
+	background: #fff;
+	border-radius: 10px;
+	border: 4px solid rgb(255,80,80);
+	z-index: 10;
+}
+
+.direction-l .flag:after,
+.direction-r .flag:after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: -8px;
+	height: 0;
+	width: 0;
+	margin-left: -8px;
+	border: solid transparent;
+	border-bottom-color: rgb(255,255,255);
+	border-width: 8px;
+	pointer-events: none;
+}
+
+.time-wrapper {
+	display: block;
+	position: relative;
+	margin: 4px 0 0 0;
+	z-index: 14;
+}
+
+.direction-l .time-wrapper {
+	float: none;
+}
+
+.direction-r .time-wrapper {
+	float: none;
+}
+
+.desc {
+	position: relative;
+	margin: 1em 0 0 0;
+	padding: 1em;
+	/* background: rgb(245,245,245);
+	-webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+	-moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+	box-shadow: 0 0 1px rgba(0,0,0,0.20); */
+	
+  z-index: 15;
+}
+
+.direction-l .desc,
+.direction-r .desc {
+	position: relative;
+	margin: 1em 1em 0 1em;
+	padding: 1em;
+	
+  z-index: 15;
+}
+
+}
+
+@media screen and (min-width: 400px ?? max-width: 660px) {
+
+.direction-l .desc,
+.direction-r .desc {
+	margin: 1em 4em 0 4em;
+}
+
+}
+
